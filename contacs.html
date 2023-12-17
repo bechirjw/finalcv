@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="cv.css">
+    <title>Mon Portfolio</title>
+</head>
+
+<body>
+    <h1 align="center" style="color: blue;"> Contactez moi </h1>
+    <hr/>
+    <table width="100%" style="background-color: mediumaquamarine;">
+        <tr>
+            <th align="left">  
+                <img src="img/logo.jpg" width="12%">
+            </th>
+            <th> <a href="index.html">Accueil</a></th>
+            <th> <a href="parcours.html">Parcours Académique</a></th>
+            <th><a href="experience.html">Expériences Professionnelles</a></th>
+            <th> <a href="contacts.html">Contact</a></th>
+        </tr>
+    </table>
+    <hr/>
+
+    <table width="100%" style="background-color: rgb(249, 49, 136);">
+        <tr>
+            <th align ="center"> <a href="insc.html">Inscription</a></th>
+           
+        </tr>
+    </table>
+    <hr/>
+
+    <section id="contact" class="contact">
+        <table>
+            <tr>
+                <td>
+                    <div class="contact__wrapper wrapper--large">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12345.678901234567!2d-86.12345678901234!3d40.123456789012345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zM40.1234567!2D-86.1234567!5e0!3m2!1sen!2sus!4v1234567890123" width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </td>
+                <td width="100%"> 
+                    <p>Je suis ravi que vous ayez pris le temps de parcourir mon portfolio en ligne. Si vous souhaitez discuter de projets passionnants, explorer des opportunités de collaboration, ou simplement échanger des idées, n'hésitez pas à me contacter. Je suis ouvert aux nouvelles perspectives et toujours prêt à établir de nouvelles connexions.</p>
+                    <pre>Mes coordonnées :
+                        - Adresse Email : bechir.jouini@esprit.com
+                        - Téléphone : +216 28 049 932
+                    </pre>	
+                
+                    <!-- Simple form setup: formspree.io -->
+                    <p>N'hésitez pas à utiliser le formulaire ci-dessous pour m'envoyer un message directement. Je m'efforcerai de vous répondre dans les plus brefs délais.</p>
+                    <form class="contact__form" id="contact__form" onsubmit="return validateForm()">
+                        <input class="contact__form-el contact__form-el--name" type="text" id="nameInput" placeholder="Your Name" spellcheck="false">
+                        <input class="contact__form-el contact__form-el--email" type="email" id="emailInput" placeholder="Your Email" spellcheck="false">
+                        <textarea class="contact__form-el contact__form-el--message" placeholder="Your Message"></textarea>
+                        <input class="contact__form-el contact__form-el--submit" type="submit" value="Send">
+                    </form>
+                    <script>
+                        function validateForm() {
+                            var nameInput = document.getElementById('nameInput').value;
+                            var emailInput = document.getElementById('emailInput').value;
+                            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+                            if (nameInput.trim() === '' || emailInput.trim() === '') {
+                                alert('Veuillez remplir tous les champs obligatoires.');
+                                return false; 
+                            }
+
+                            if (!emailRegex.test(emailInput)) {
+                                alert('Veuillez saisir une adresse e-mail valide.');
+                                return false; 
+                            }
+                            return true; 
+                        }
+                    </script>
+                </td>
+            </tr>
+        </table>
+        <h1>Merci encore pour votre visite, et j'attends avec impatience de pouvoir échanger avec vous !</h1>
+    </section>
+    <div class="social-panel-container">
+        <div class="social-panel">
+            <p>Created <i class="fa fa-heart"></i> by
+                <a target="_blank" href="https://florin-pop.com">BECHIR</a></p>
+            <button class="close-btn"><i class="fas fa-times"></i></button>
+            <h4>Get in touch on</h4>
+            <ul>
+                
+                <li>
+                    <a href="https://www.facebook.com/profile.php?id=100008836059042" target="_blank">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/bachir.jw/?hl=en" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2023 Mon Portfolio en Ligne | Conçu par JOUINI BECHIR</p>
+    </footer>
+</body>
+</html>
